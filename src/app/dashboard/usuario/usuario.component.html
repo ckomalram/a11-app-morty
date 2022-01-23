@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="row d-flex justify-content-center" *ngIf="loading">
+    <div class="spinner-grow text-danger spinnercolor"  >
+     </div>
+     <div class="spinner-grow text-danger spinnercolor"  >
+    </div>
+    <div class="spinner-grow text-danger spinnercolor"  >
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngIf="!loading">
+  <div class="col-lg-8 offset-lg-2">
+    <div class="card" style="width: 25rem; margin: 0 auto;">
+      <img [src]="imgUrl" class="card-img-top img-thumbnail">
+      <div class="card-body text-center">
+        <h5 class="card-title">
+          {{ name }}
+        </h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Genero: {{gender}}</li>
+          <li class="list-group-item">Especie: {{species}}</li>
+          <li class="list-group-item">Estado: {{status}}</li>
+          <li class="list-group-item">Origen: {{origin}}</li>
+          <li class="list-group-item">Episodios: {{episodios}}</li>
+        </ul>
+      </div>
+      <button class="btn btn-primary btn-block btn-xl"
+      routerLink="/dashboard"
+      >
+        VOLVER
+      </button>
+    </div>
+  </div>
+</div>

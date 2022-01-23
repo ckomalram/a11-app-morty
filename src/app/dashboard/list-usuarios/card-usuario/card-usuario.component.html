@@ -1,0 +1,13 @@
+<div class="card">
+  <img [src]="imgUrl" class="card-img-top" />
+  <div class="card-body">
+    <h5 class="card-title text-center">{{ name }}</h5>
+    <p class="card-text text-center">{{ species }} - {{ status }}</p>
+    <button
+      class="btn btn-primary btn-block btn-xl"
+      routerLink="usuario/{{ id }}"
+    >
+      VER
+    </button>
+  </div>
+</div>
